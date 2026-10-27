@@ -1,4 +1,5 @@
 Microsoft Entra ID Lab: Groups, Dynamic Membership & External (Guest) Collaboration
+
 It walks through managing identities in a Microsoft Entra ID tenant: security groups, dynamic membership rules, custom domains, bulk user operations, and inviting external guest users.
 
 OBJECTIVES
