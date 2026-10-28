@@ -36,12 +36,16 @@ For the guest group, a more useful rule targets guest accounts:
 ![Dynamic membership rules](screenshots/02-dynamic-membership-rules.png)
 The resulting group (`SC300-myDynamicGroup- Guest`) shows Membership type: Dynamic and Dynamic rules processing status: Succeeded.
 ![Dynamic group overview](screenshots/05-dynamic-group-overview.png)
+
 3. Custom domain names
 Checked domains under Entra ID > Custom domain names: the default `onmicrosoft.com` domain and an additional verified subdomain.
 ![Custom domains](screenshots/03-custom-domains.png)
+
+
 4. Bulk operations
 Used Users > Bulk operations to create users from `SC300BulkUser.csv` and invite guests from `UserInviteTemplate.csv`, then checked the outcome under Bulk operation results.
 ![Bulk operation results](screenshots/07-bulk-operation-results.png)
+
 5. Inviting an external user (Microsoft Graph PowerShell)
 ```powershell
 Import-Module Microsoft.Graph.Identity.SignIns
@@ -58,9 +62,11 @@ The command returns an invitation `Id` and an `InviteRedeemUrl`. Connect first w
 Connect-MgGraph -Scopes "User.Invite.All"
 ```
 ![Graph PowerShell invitation](screenshots/06-powershell-invitation.png)
+
 6. Receiving the invitation
 The invited user receives an email from `invites@<tenant>.onmicrosoft.com`. In this lab it landed in Spam, which is a common gotcha worth checking when testing B2B invitations.
 ![Invitation email](screenshots/05-invitation-email.png)
+
 7. External collaboration settings
 Under External Identities > External collaboration settings, guest user access was set to the most restrictive option: guests can only see properties and memberships of their own directory objects.
 ![External collaboration settings](screenshots/08-external-collaboration-settings.png)
